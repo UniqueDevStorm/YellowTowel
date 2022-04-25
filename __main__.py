@@ -14,14 +14,14 @@ class YellowTowel(commands.AutoShardedBot):
             if extension.endswith(".py"):
                 self.load_extension(f"exts.{extension[:-3]}")
                 print(f"Loaded {extension}")
-        self.load_extension('jishaku')
+        self.load_extension("jishaku")
         self.owner_ids = [299895531701010442]
-        print('Loaded jishaku')
+        print("Loaded jishaku")
 
     async def on_ready(self):
         await self.change_presence(activity=Game(name="신문 배달"))
-        print(f'Logged in as {self.user}')
+        print(f"Logged in as {self.user}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     YellowTowel().run(os.getenv("TOKEN"))
